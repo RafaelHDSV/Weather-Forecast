@@ -30,8 +30,9 @@ export default function Capitals() {
             </div>
 
             {
-                weatherCapitals.map((item) => (
-                    <div className='capitals-item'>
+                // map nos dados da api para html
+                weatherCapitals.map((item, key) => (
+                    <div className='capitals-item' key={key}>
                         <span>{`${item.url.forecast.forecastday[0].day.mintemp_c.toFixed(0)} °`}</span>
                         <span>{`${item.url.forecast.forecastday[0].day.maxtemp_c.toFixed(0)} °`}</span>
                         <span>{item.name}</span>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import WeatherApi from './api/WeatherApi';
 
+import Input from './components/Input';
 import Capitals from './components/Capitals';
 
 import './App.css';
@@ -13,22 +14,23 @@ function App() {
   // useState para armazenar a API do input
   const [weatherInput, setWeatherInput] = useState("")
 
-
   const loadInput = async (event) => {
     setQueryInput(event.target.value)
 
     let inputWeather = await WeatherApi.getInput(queryInput)
     setWeatherInput(inputWeather);
-    console.log(weatherInput);
   }
 
   return (
     <main className="App">
-      <h1>Weather Forecast</h1>
+      <Input
+        inputValue={weatherInput}
+      ></Input>
 
-      <input type="text" onChange={loadInput} />
+      <h1>Previsão do Tempo</h1>
 
-      <p>{queryInput}</p>
+      <input type="text" placeholder='Insira aqui o nome da cidade' onChange={loadInput} />
+      <button>Pesquisar</button>
 
       <Capitals></Capitals>
     </main >
