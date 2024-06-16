@@ -17,12 +17,24 @@ export default function Capitals() {
 
     return (
         <div className="capitals-container">
+            <h2>Capitais</h2>
+
+            <div className="capitals-tags">
+                <span>min</span>
+                <span>max</span>
+            </div>
+
+            <div className="capitals-tags">
+                <span>min</span>
+                <span>max</span>
+            </div>
+
             {
                 weatherCapitals.map((item) => (
                     <div className='capitals-item'>
-                        <p>{item.name}</p>
-                        <p>{item.url.forecast.forecastday[0].day.mintemp_c}</p>
-                        <p>{item.url.forecast.forecastday[0].day.maxtemp_c}</p>
+                        <span>{`${item.url.forecast.forecastday[0].day.mintemp_c.toFixed(0)} °`}</span>
+                        <span>{`${item.url.forecast.forecastday[0].day.maxtemp_c.toFixed(0)} °`}</span>
+                        <span>{item.name}</span>
                     </div>
                 ))
             }
