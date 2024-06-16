@@ -1,7 +1,5 @@
 # Desafio-Frontend
 
-![alt tag](https://s3-us-west-1.amazonaws.com/1sti/1sti-transformacao.png)
-
 ## Bem-vindo
 
 A 1STi é uma consultoria em tecnologias digitais emergentes que tem a missão de aproximar a tecnologia das reais necessidades sociais. Nós enxergamos a tecnologia como um presente à humanidade dado pela expressão de nosso próprio intelecto, realizando uma síntese entre arte, humanidade e ciência.
